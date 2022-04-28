@@ -3,6 +3,7 @@ SITENAME = 'Tales Mota'
 SITEURL = 'https://talesmota.dev'
 
 RELATIVE_URLS = True
+OUTPUT_PATH = 'docs'
 
 PATH = 'content'
 ARTICLE_PATHS = ['blog']

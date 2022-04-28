@@ -1,7 +1,6 @@
 .__pycache__
 .pelican.env
 .theme
-.output
 
 #Custom
 output
