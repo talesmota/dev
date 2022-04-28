@@ -1,8 +1,8 @@
 AUTHOR = 'Tales Mota'
 SITENAME = 'Tales Mota'
-SITEURL = 'https://talesmota.dev'
+SITEURL = 'https://talesmota.github.io/dev/'
 
-RELATIVE_URLS = True
+# RELATIVE_URLS = True
 OUTPUT_PATH = 'docs'
 
 PATH = 'content'
@@ -10,7 +10,7 @@ ARTICLE_PATHS = ['blog']
 ARTICLE_SAVE_AS = '{date:%Y}/{slug}.html'
 ARTICLE_URL = '{date:%Y}/{slug}.html'
 
-THEME = "theme/pelican-striped-html5up"
+THEME = "./theme/pelican-striped-html5up"
 
 TIMEZONE = 'America/Sao_Paulo'
 
