@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="//db.onlinewebfonts.com/c/cab835836e00ef7b73ca08c66eb70da1?family=Zing+Sans+Rust+B+Base+LD"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>logo animation</title>
+    <style>
+      @font-face {
+        font-family: "Zing Sans Rust B Base LD";
+        src: url("//db.onlinewebfonts.com/t/cab835836e00ef7b73ca08c66eb70da1.eot");
+        src: url("//db.onlinewebfonts.com/t/cab835836e00ef7b73ca08c66eb70da1.eot?#iefix")
+            format("embedded-opentype"),
+          url("//db.onlinewebfonts.com/t/cab835836e00ef7b73ca08c66eb70da1.woff2")
+            format("woff2"),
+          url("//db.onlinewebfonts.com/t/cab835836e00ef7b73ca08c66eb70da1.woff")
+            format("woff"),
+          url("//db.onlinewebfonts.com/t/cab835836e00ef7b73ca08c66eb70da1.ttf")
+            format("truetype"),
+          url("//db.onlinewebfonts.com/t/cab835836e00ef7b73ca08c66eb70da1.svg#Zing Sans Rust B Base LD")
+            format("svg");
+      }
+
+      h1.tm {
+        display: flex;
+      }
+      .ml2,
+      h1 {
+        font-weight: normal;
+        font-size: 3.5em;
+        position: relative;
+      }
+
+      .ml2 .letter,
+      span {
+        display: inline-block;
+        line-height: 1em;
+        color: #3475b1;
+      }
+      .hide {
+        display: none;
+      }
+      .logo {
+        top: 0;
+        left: 0;
+        position: relative;
+      }
+      .logo {
+        font-family: "Zing Sans Rust B Base LD";
+        src: url("//db.onlinewebfonts.com/t/cab835836e00ef7b73ca08c66eb70da1.eot");
+        src: url("//db.onlinewebfonts.com/t/cab835836e00ef7b73ca08c66eb70da1.eot?#iefix")
+            format("embedded-opentype"),
+          url("//db.onlinewebfonts.com/t/cab835836e00ef7b73ca08c66eb70da1.woff2")
+            format("woff2"),
+          url("//db.onlinewebfonts.com/t/cab835836e00ef7b73ca08c66eb70da1.woff")
+            format("woff"),
+          url("//db.onlinewebfonts.com/t/cab835836e00ef7b73ca08c66eb70da1.ttf")
+            format("truetype"),
+          url("//db.onlinewebfonts.com/t/cab835836e00ef7b73ca08c66eb70da1.svg#Zing Sans Rust B Base LD")
+            format("svg");
+      }
+
+      #open,
+      #close {
+        color: #6cb462;
+      }
+      .t {
+        color: #3475b1;
+      }
+      .m {
+        color: #3475b1;
+      }
+    </style>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+      integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="logo">
+      <h1 class="tm">
+        <span id="open">{</span>
+        <span class="t">t</span>
+
+        <span class="m">m</span>
+
+        <span id="close">}</span>
+      </h1>
+      <div>
+        <span
+          id="ales"
+          class="ml2"
+          style="position: absolute; top: 0px; left: 50px; display: none"
+          >ales
+        </span>
+        <span
+          id="ota"
+          class="ml2"
+          style="position: absolute; top: 50px; left: 100px; display: none"
+          >ota
+        </span>
+      </div>
+    </div>
+
+    <script>
+      const REVERSE_TM = 4300;
+      const TYPING = 900;
+      function animateObj(target, x, y) {
+        let xy;
+        xy = {
+          targets: target,
+          easing: "easeInOutSine",
+        };
+        if (!!x) {
+          xy.translateY = y;
+        } else {
+          xy.translateX = x;
+        }
+        return xy;
+      }
+      function getOriginalCoordenate(sel) {
+        return [
+          anime.get(document.querySelector(sel, "translateX")),
+          anime.get(document.querySelector(sel, "translateY")),
+        ];
+      }
+      function timeline() {
+        return anime.timeline({
+          duration: 400,
+          loop: false,
+          easing: "easeInOutSine",
+          autoplay: false,
+        });
+      }
+      function animateLogo() {
+        const [tx, ty] = getOriginalCoordenate(".t");
+        const [mx, my] = getOriginalCoordenate(".m");
+        const [closex, closey] = getOriginalCoordenate("#close");
+
+        timeline()
+          .add(animateObj(".t", null, 10))
+          .add(animateObj(".m", -50, 50))
+          .add(animateObj("#close", -90, 90))
+          .play();
+
+        setTimeout(() => {
+          console.log("voltando");
+          timeline()
+            .add(animateObj(".t", 0, -10))
+            .add(animateObj(".m", -100, 0))
+            .add(animateObj("#close", -180, 0))
+            .play();
+        }, REVERSE_TM);
+      }
+      function typing() {
+        setTimeout(() => {
+          let letters = ["#ales", "#ota"];
+          var _textWrapper = document.querySelectorAll(".ml2");
+          let index = 0;
+          for (let textWrapper of _textWrapper) {
+            document.querySelector(letters[index]).style.display = "block";
+            index++;
+            const originalText = textWrapper.innerHTML;
+            // Wrap every letter in a span
+            textWrapper.innerHTML = textWrapper.textContent.replace(
+              /\S/g,
+              "<span class='letter'>$&</span>"
+            );
+
+            anime
+              .timeline({ loop: false })
+              .add({
+                targets: ".ml2 .letter",
+                scale: [4, 1],
+                opacity: [0, 1],
+                translateZ: 0,
+                easing: "easeOutExpo",
+                duration: 950,
+                delay: (el, i) => 70 * i,
+              })
+              .add({
+                targets: ".ml2",
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000,
+              });
+          }
+          setTimeout(() => {
+            ["#ales", "#ota"].forEach((sel) => {
+              document.querySelector(sel).style.display = "none";
+              document.querySelector(sel).style.opacity = 1;
+            });
+          }, REVERSE_TM);
+        }, TYPING);
+      }
+
+      window.addEventListener("load", function () {
+        setTimeout(() => {
+          animateLogo();
+          typing();
+          let over = true;
+          document.querySelector(".logo").addEventListener("mouseover", (e) => {
+            console.log("ooo");
+            if (over) {
+              over = false;
+              animateLogo();
+              typing();
+              setTimeout(() => (over = true), TYPING);
+            }
+          });
+        }, 900);
+      });
+    </script>
+  </body>
+</html>

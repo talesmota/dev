@@ -90,6 +90,11 @@
 		border-top: solid 1px #ddd;
 		padding: 1.5em 0 0 0;
 		margin: 1.75em 0 0 0;
+		&.menu_separator{
+			border-top: solid 1px rgba(0, 0, 0, 0.25);
+			box-shadow: inset 0px 1px 0px 0px rgb(255 255 255 / 8%);
+			padding: 0.5em 0 0.5em 0;
+		}
 	}
 
 	sub {
@@ -703,7 +708,7 @@
 		padding: 3em 1.35em 1em 1.15em;
 		background: #304046 url('images/bg01.png');
 		overflow-y: auto;
-
+		
 		@if _misc(sidebar-side) == 'left' {
 			left: 0;
 			box-shadow: inset -0.1em 0em 0.35em 0em rgba(0, 0, 0, 0.15);

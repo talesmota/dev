@@ -1,16 +1,17 @@
+import os
 AUTHOR = 'Tales Mota'
 SITENAME = 'Tales Mota'
 # SITEURL = 'https://talesmota.github.io/dev/'
-SITEURL = 'http://localhost:8000/'
+SITEURL = "http://localhost:8000"
 PORT=8000
-
+# 
 # RELATIVE_URLS = True
 OUTPUT_PATH = 'docs'
 
 PATH = 'content'
 ARTICLE_PATHS = ['blog']
-ARTICLE_SAVE_AS = '{date:%Y}/{slug}.html'
-ARTICLE_URL = '{date:%Y}/{slug}.html'
+ARTICLE_SAVE_AS = '{category}/{slug}.html'
+ARTICLE_URL = '{category}/{slug}.html'
 
 THEME = "./theme/pelican-striped-html5up"
 # THEME = "/home/tales/pelican-themes/brutalist/brutalist"
@@ -19,8 +20,7 @@ TIMEZONE = 'America/Sao_Paulo'
 
 DEFAULT_LANG = 'en'
 PLUGIN_PATHS = ['/home/tales/pelican-plugins']
-PLUGINS = ['ace_editor']
-ACE_EDITOR_PLUGIN={}
+
 MARKDOWN =  {
     'extensions' : ['codehilite', 'extra'],
     'extension_configs': {
@@ -30,7 +30,28 @@ MARKDOWN =  {
     },
     'output_format': 'html5',
 }
-    
+
+SITEMAP = {
+    "format": "xml",
+    "priorities": {
+        "articles": 0.5,
+        "indexes": 0.5,
+        "pages": 0.5
+    },
+    "changefreqs": {
+        "articles": "monthly",
+        "indexes": "daily",
+        "pages": "monthly"
+    }
+}
+
+SEO_REPORT = True  # To enable this feature
+SEO_ENHANCER = False  # To disable this feature
+SEO_ENHANCER_OPEN_GRAPH = False # The default value for this feature
+SEO_ENHANCER_TWITTER_CARDS = False # The default value for this feature    
+
+SEARCH_MODE = "output"
+SEARCH_HTML_SELECTOR = "main"
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None

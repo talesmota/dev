@@ -1,0 +1,67 @@
+@font-face {font-family: "Zing Sans Rust Bold Base Line Diagonals";
+  src: url("/theme/fonts/zing-sans-rust/cab835836e00ef7b73ca08c66eb70da1.eot"); /* IE9*/
+  src: url("/theme/fonts/zing-sans-rust/cab835836e00ef7b73ca08c66eb70da1.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("/theme/fonts/zing-sans-rust/cab835836e00ef7b73ca08c66eb70da1.woff2") format("woff2"), /* chrome、firefox */
+  url("/theme/fonts/zing-sans-rust/cab835836e00ef7b73ca08c66eb70da1.woff") format("woff"), /* chrome、firefox */
+  url("/theme/fonts/zing-sans-rust/cab835836e00ef7b73ca08c66eb70da1.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("/theme/fonts/zing-sans-rust/cab835836e00ef7b73ca08c66eb70da1.svg#Zing Sans Rust Bold Base Line Diagonals") format("svg"); /* iOS 4.1- */
+}
+
+.logo-div .brackets,
+.logo .brackets {
+  color: #6cb462;
+}
+.logo-div .letters,
+.logo .letters {
+    color: #3475b1;
+}
+
+#hover{
+    position: relative;
+    top: 0;
+    display: block;
+    height: 100px;
+}
+#hover > span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#hover > span:nth-child(2){
+position: absolute;
+    left: 27px;
+    top: 27px;
+} 
+#hover > span:nth-child(3){
+    position: absolute;
+    top: 54px;
+    left: 27px;
+}
+#hover > span:nth-child(4){
+position: absolute;
+    top: 60px;
+    left: 113px;
+}
+#logo .noactive{
+    display: none;
+}
+.logo-div, .logo-div > a{
+    display: flex !important;
+}
+.logo-div{
+    height: 138px;
+    padding: 0;
+    margin: 0;
+}
+.logo-div a{ 
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+#nohover {
+    display: flex;
+    width: 100%;
+    align-self: center;
+    justify-content: center;
+}

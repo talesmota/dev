@@ -1,0 +1,8 @@
+[input]
+base_directory = "/home/tales/WORKSPACE/talesmota/docs"
+html_selector = "main"
+
+[[input.files]]
+path = "python/test-post.html"
+url = "python/test-post.html"
+title = "Test Post"

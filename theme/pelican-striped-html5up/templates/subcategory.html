@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% for subcategory in categories.subcategories %}
+    <li>
+        <a href="{{ SITEURL }}/{{ subcategory.url }}">{{ subcategory.shortname }}</a>
+    </li>
+{% endfor %}
+</ol>
+</nav>
+{% endblock %}

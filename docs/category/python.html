@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tales Mota</title>
+    <meta charset="utf-8" />
+            <link rel="stylesheet" href="/theme/css/main.css" />
+    <link rel="stylesheet" href="/theme/css/logo.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://files.stork-search.net/basic.css" />
+
+  <script src="https://files.stork-search.net/releases/v1.4.2/stork.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180"    href="/theme/css/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/theme/css/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/theme/css/images/favicon-16x16.png">
+  <link rel="manifest"                            href="/theme/css/images/site.webmanifest">
+  <link rel="mask-icon"                           href="/theme/css/images/safari-pinned-tab.svg" color="#5bbad5">
+
+  <!--[if lte IE 8
+      ]><script src="/theme/js/ie/html5shiv.js"></script
+    ><![endif]-->
+    <!--[if lte IE 8
+      ]><link rel="stylesheet" href="/theme/css/ie8.css"
+    /><![endif]-->
+  </head>
+
+  <body>
+    <header id="banner" class="body">
+      <div class="logo-div">
+        <h1>
+          <span class="brackets">{</span>
+          <span class="letters">tm</span>  
+          <span class="brackets">}</span>
+        </h1>
+      </div>
+
+    </header>
+    <!-- /#banner -->
+    <!-- Sidebar -->
+<button id="menubtn" class="menu" aria-controls="sidebar">
+  <span class="sr-only">Menu</span>
+  <i class="fa fa-bars" aria-hidden="true" style="display: flex;align-content: center;justify-content: center;"></i>
+</button>
+<div id="sidebar">
+  <div class="menu-content">
+    <!-- Logo -->
+    <h1 id="logo" class="logo-div">
+      <a href="/">
+        <h1 id="nohover">
+          <span class="brackets">{</span>
+          <span class="letters">tm</span>
+          <span class="brackets">}</span>
+        </h1>
+        <h1 id="hover" class="noactive" style="position: relative">
+          <span class="brackets">{</span>
+          <span class="letters">tales</span>
+          <span class="letters">mota</span>
+          <span class="brackets">}</span>
+        </h1>
+      </a>
+    </h1>
+    <!-- Text -->
+    <div class="search">
+      <header style="margin-top: 20px">
+        <label for="sitesearch">
+          Search
+        </label>
+        <input id="sitesearch" data-stork="sitesearch"/>
+        <div data-stork="sitesearch-output"></div>
+      </header>
+    </div>
+    <!-- Nav -->
+    <nav id="nav">
+      <header>
+        <h2>Categories</h2>
+      </header>
+      <ul>
+            <li><a href="http://localhost:8000/category/python.html">Python</a></li>
+      </ul>
+      <hr class="menu_separator" />
+    </nav>
+
+    <!-- Search -->
+    <!-- <section class="box search">
+                          <form method="post" action="#">
+                              <input type="text" class="text" name="search" placeholder="Search" />
+                          </form>
+                      </section> -->
+
+    <!-- Recent Posts -->
+    <section class="box recent-posts">
+      <header>
+        <h2>Contact Me</h2>
+      </header>
+      <ul class="contact">
+        <li>
+          <a
+            class="icon fa-linkedin"
+            href="https://www.linkedin.com/in/tales-mota-machado-msc-0156aa50/"
+          >
+            <span>LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <a
+            class="icon fa-github"
+            href="https://github.com/talesmota"
+            target="_blank"
+          >
+            <span>Github</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<script>
+  var button = document.querySelector("#menubtn");
+  var menu = document.querySelector("#sidebar");
+  function toggleNav(nav, navContent) {
+    var navEle = document.querySelector(nav);
+    var navContent = document.querySelector(navContent);
+    if (!navEle) return;
+
+    if (!navEle.classList.contains("open")) {
+      navEle.setAttribute("class", "open");
+      setTimeout(() => navContent.classList.add("open"), 300);
+      return;
+    }
+    navEle.removeAttribute("class");
+    navContent.classList.remove("open");
+  }
+  button.addEventListener(
+    "click",
+    () => toggleNav("#sidebar", ".menu-content"),
+    false
+  );
+
+  let hover = document.querySelector("#logo a");
+  const logoToggle = () => {
+    let active = document.querySelector("#hover");
+    let noactive = document.querySelector("#nohover");
+    if (noactive.classList.contains("noactive")) {
+      active.classList.add("noactive");
+      noactive.classList.remove("noactive");
+    } else {
+      noactive.classList.add("noactive");
+      active.classList.remove("noactive");
+    }
+  };
+  hover.addEventListener("mouseenter", logoToggle, false);
+  hover.addEventListener("mouseleave", logoToggle, false);
+</script>    <!-- /#menu -->
+<div id="content">
+
+    
+<div class="inner">
+<!-- <h2>Articles in the Python category</h2>
+ -->
+
+
+        <article class="box post post-excerpt">
+                <header> 
+                <h2><a href="http://localhost:8000/python/test-post.html" rel="bookmark" title="Permalink to Test Post">Test Post</a></h2> 
+                <p></p>
+                </header>
+                <div class="info">
+                    <span class="date" datetime="2022-04-28T00:00:00-03:00"><span class="month">Apr</span> <span class="day">28</span> <span class="month"> 2022</span></span>
+                    <!-- <ul class="stats">
+                                    <li><a href="#" class="icon fa-comment">16</a></li>
+                                    <li><a href="#" class="icon fa-heart">32</a></li>
+                                    <li><a href="#" class="icon fa-twitter">64</a></li>
+                                    <li><a href="#" class="icon fa-facebook">128</a></li>
+                                </ul> -->
+                </div><!-- /.post-info -->
+                <div class="entry-content"> &nbsp; </div><!-- /.entry-content -->
+        </article>
+<!-- /#posts-list -->
+</div>
+</div><!-- /#content -->
+    <!-- /#contentinfo -->
+
+<script>
+    stork.initialize()
+    stork.downloadIndex("sitesearch", "http://localhost:8000/search-index.st")
+    stork.attach("sitesearch")
+</script>
+  </body>
+</html>

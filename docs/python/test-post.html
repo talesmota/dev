@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<title>Tales Mota</title>
+<meta charset="utf-8"/>
+<link href="/theme/css/main.css" rel="stylesheet"/>
+<link href="/theme/css/logo.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="https://files.stork-search.net/basic.css" rel="stylesheet"/>
+<script src="https://files.stork-search.net/releases/v1.4.2/stork.js"></script>
+<link href="/theme/css/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/theme/css/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/theme/css/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/theme/css/images/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/theme/css/images/safari-pinned-tab.svg" rel="mask-icon"/>
+<!--[if lte IE 8
+      ]><script src="/theme/js/ie/html5shiv.js"></script
+    ><![endif]-->
+<!--[if lte IE 8
+      ]><link rel="stylesheet" href="/theme/css/ie8.css"
+    /><![endif]-->
+<link href="http://localhost:8000/python/test-post.html" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Tales Mota", "item": "http://localhost:8000"}, {"@type": "ListItem", "position": 2, "name": "Python", "item": "http://localhost:8000/python"}, {"@type": "ListItem", "position": 3, "name": "Test post", "item": "http://localhost:8000/python/test-post.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "Tales Mota"}, "publisher": {"@type": "Organization", "name": "Tales Mota"}, "headline": "Test Post", "about": "Python", "datePublished": "2022-04-28 00:00"}</script></head>
+<body>
+<header class="body" id="banner">
+<div class="logo-div">
+<h1>
+<span class="brackets">{</span>
+<span class="letters">tm</span>
+<span class="brackets">}</span>
+</h1>
+</div>
+</header>
+<!-- /#banner -->
+<!-- Sidebar -->
+<button aria-controls="sidebar" class="menu" id="menubtn">
+<span class="sr-only">Menu</span>
+<i aria-hidden="true" class="fa fa-bars" style="display: flex;align-content: center;justify-content: center;"></i>
+</button>
+<div id="sidebar">
+<div class="menu-content">
+<!-- Logo -->
+<h1 class="logo-div" id="logo">
+<a href="/">
+<h1 id="nohover">
+<span class="brackets">{</span>
+<span class="letters">tm</span>
+<span class="brackets">}</span>
+</h1>
+<h1 class="noactive" id="hover" style="position: relative">
+<span class="brackets">{</span>
+<span class="letters">tales</span>
+<span class="letters">mota</span>
+<span class="brackets">}</span>
+</h1>
+</a>
+</h1>
+<!-- Text -->
+<div class="search">
+<header style="margin-top: 20px">
+<label for="sitesearch">
+          Search
+        </label>
+<input data-stork="sitesearch" id="sitesearch"/>
+<div data-stork="sitesearch-output"></div>
+</header>
+</div>
+<!-- Nav -->
+<nav id="nav">
+<header>
+<h2>Categories</h2>
+</header>
+<ul>
+<li><a href="http://localhost:8000/category/python.html">Python</a></li>
+</ul>
+<hr class="menu_separator"/>
+</nav>
+<!-- Search -->
+<!-- <section class="box search">
+                          <form method="post" action="#">
+                              <input type="text" class="text" name="search" placeholder="Search" />
+                          </form>
+                      </section> -->
+<!-- Recent Posts -->
+<section class="box recent-posts">
+<header>
+<h2>Contact Me</h2>
+</header>
+<ul class="contact">
+<li>
+<a class="icon fa-linkedin" href="https://www.linkedin.com/in/tales-mota-machado-msc-0156aa50/">
+<span>LinkedIn</span>
+</a>
+</li>
+<li>
+<a class="icon fa-github" href="https://github.com/talesmota" target="_blank">
+<span>Github</span>
+</a>
+</li>
+</ul>
+</section>
+</div>
+</div>
+<script>
+  var button = document.querySelector("#menubtn");
+  var menu = document.querySelector("#sidebar");
+  function toggleNav(nav, navContent) {
+    var navEle = document.querySelector(nav);
+    var navContent = document.querySelector(navContent);
+    if (!navEle) return;
+
+    if (!navEle.classList.contains("open")) {
+      navEle.setAttribute("class", "open");
+      setTimeout(() => navContent.classList.add("open"), 300);
+      return;
+    }
+    navEle.removeAttribute("class");
+    navContent.classList.remove("open");
+  }
+  button.addEventListener(
+    "click",
+    () => toggleNav("#sidebar", ".menu-content"),
+    false
+  );
+
+  let hover = document.querySelector("#logo a");
+  const logoToggle = () => {
+    let active = document.querySelector("#hover");
+    let noactive = document.querySelector("#nohover");
+    if (noactive.classList.contains("noactive")) {
+      active.classList.add("noactive");
+      noactive.classList.remove("noactive");
+    } else {
+      noactive.classList.add("noactive");
+      active.classList.remove("noactive");
+    }
+  };
+  hover.addEventListener("mouseenter", logoToggle, false);
+  hover.addEventListener("mouseleave", logoToggle, false);
+</script> <!-- /#menu -->
+<div id="content">
+<div class="inner">
+<article class="box post post-excerpt">
+<header>
+<h2><a href="http://localhost:8000/python/test-post.html" rel="bookmark" title="Permalink to Test Post">Test Post</a></h2>
+<p></p>
+</header>
+<div class="info">
+<span class="date" datetime="2022-04-28T00:00:00-03:00"><span class="month">Apr</span> <span class="day">28</span> <span class="month"> 2022</span></span>
+<ul class="stats">
+<li><a class="icon fa-envelope" href="mailto:?Subject=Test Post&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 http://localhost:8000/python/test-post.html"> </a></li>
+<li><a "="" class="icon fa-reddit" href="http://reddit.com/submit?url=http://localhost:8000/python/test-post.html&amp;title=#Test Post"> </a></li>
+<li><a class="icon fa-twitter" href="https://twitter.com/share?url=http://localhost:8000/python/test-post.html&amp;text=&amp;hashtags=GnotC"> </a></li>
+<li><a class="icon fa-facebook" href="https://www.facebook.com/sharer.php?u=http://localhost:8000/python/test-post.html"> </a></li>
+</ul>
+</div><!-- /.post-info -->
+<div class="entry-content">   </div><!-- /.entry-content -->
+</article>
+<main>
+<h1>Hello World</h1>
+<p>TESTE
+asdlfkçja
+asdfasdasdfç
+alçsdkfjaç~sdfa
+alsçdjkfaçlsdf</p>
+</main>
+</div><!-- /.entry-content -->
+<!-- Pagination -->
+<div class="pagination">
+</div>
+</div>
+
+<!-- /#contentinfo -->
+<script>
+    stork.initialize()
+    stork.downloadIndex("sitesearch", "http://localhost:8000/search-index.st")
+    stork.attach("sitesearch")
+</script>
+</body>
+</html>
