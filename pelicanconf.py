@@ -1,9 +1,9 @@
 import os
 AUTHOR = 'Tales Mota'
 SITENAME = 'Tales Mota'
-# SITEURL = 'https://talesmota.github.io/dev/'
-SITEURL = "http://localhost:8000"
-PORT=8000
+SITEURL = 'https://talesmota.dev/'
+# SITEURL = "http://localhost:8000"
+# PORT=8000
 # 
 # RELATIVE_URLS = True
 OUTPUT_PATH = 'docs'

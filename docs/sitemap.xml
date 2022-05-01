@@ -4,28 +4,28 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>http://localhost:8000/</loc>
-<lastmod>2022-05-01T17:15:23-00:00</lastmod>
+<loc>https://talesmota.dev/</loc>
+<lastmod>2022-05-01T17:16:55-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/python/test-post.html</loc>
+<loc>https://talesmota.dev/python/test-post.html</loc>
 <lastmod>2022-04-28T00:00:00-03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/category/python.html</loc>
+<loc>https://talesmota.dev/category/python.html</loc>
 <lastmod>2022-04-28T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/author/tales-mota.html</loc>
+<loc>https://talesmota.dev/author/tales-mota.html</loc>
 <lastmod>2022-04-28T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
