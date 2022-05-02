@@ -184,8 +184,8 @@
             var absoluteButton = document.querySelector("#absoluteButton");
             let timeToGetAnotherMeta = 0;
             function getMetaData( playerButton ) {
-                const url = "https://thingproxy.freeboard.io/fetch/https://listenapi.planetradio.co.uk/api9.2/initdadi/absolute-classic-rock";
-                
+                // const url = "https://thingproxy.freeboard.io/fetch/https://listenapi.planetradio.co.uk/api9.2/initdadi/absolute-classic-rock";
+                const url = 'https://api.codetabs.com/v1/proxy?quest=https://listenapi.planetradio.co.uk/api9.2/initdadi/absolute-classic-rock';
                 (async () => {
                 const response = await fetch(url);
                 const body = await response.json();
