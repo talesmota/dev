@@ -41,6 +41,15 @@
         {% endfor %}
       </ul>
       <hr class="menu_separator" />
+      {% if DISPLAY_PAGES_ON_MENU %}
+        {% if pages %}
+        <ul>
+          {% for p in pages %}
+          <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      {% endif %}
     </nav>
 
     <!-- Search -->
