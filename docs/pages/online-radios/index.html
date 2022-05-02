@@ -208,11 +208,11 @@
 
                 if ( timeToGetAnotherMeta != 0) {
                     if ( playerButton.classList.contains('play')) {
-                        setTimeout( () =>  getMetaData(playerButton), (timeToGetAnotherMeta/3) * 1000);
+                        setTimeout( () =>  getMetaData(playerButton), 15 * 1000);
                     }
                 } else {
                     if ( playerButton.classList.contains('play')) {
-                        setTimeout( () =>  getMetaData(playerButton), 60000);
+                        setTimeout( () =>  getMetaData(playerButton), 10000);
                     }
                 }
                 })()
