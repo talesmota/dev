@@ -75,7 +75,7 @@ DEFAULT_PAGINATION = 15
 #RELATIVE_URLS = True
 
 DISPLAY_PAGES_ON_MENU = True
-PAGE_PATHS = ['pages']
+PAGE_PATHS = [ 'pages']
 PAGE_URL = 'pages/{slug}/'
 PAGE_SAVE_AS = 'pages/{slug}/index.html'
 PAGE_LANG_URL = 'pages/{slug}-{lang}.html'

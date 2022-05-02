@@ -3,6 +3,11 @@ base_directory = "/home/tales/WORKSPACE/talesmota/docs"
 html_selector = "main"
 
 [[input.files]]
+path = "pages/online-radios/index.html"
+url = "pages/online-radios/"
+title = "Online Radios"
+
+[[input.files]]
 path = "python/test-post.html"
 url = "python/test-post.html"
 title = "Test Post"
