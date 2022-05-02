@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My super title</title>
+    <meta charset="utf-8" />
+            <link rel="stylesheet" href="/theme/css/main.css" />
+    <link rel="stylesheet" href="/theme/css/logo.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://files.stork-search.net/basic.css" />
+
+  <script src="https://files.stork-search.net/releases/v1.4.2/stork.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180"    href="/theme/css/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/theme/css/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/theme/css/images/favicon-16x16.png">
+  <link rel="manifest"                            href="/theme/css/images/site.webmanifest">
+  <link rel="mask-icon"                           href="/theme/css/images/safari-pinned-tab.svg" color="#5bbad5">
+
+  <!--[if lte IE 8
+      ]><script src="/theme/js/ie/html5shiv.js"></script
+    ><![endif]-->
+    <!--[if lte IE 8
+      ]><link rel="stylesheet" href="/theme/css/ie8.css"
+    /><![endif]-->
+  </head>
+
+  <body>
+    <header id="banner" class="body">
+      <div class="logo-div">
+        <h1>
+          <span class="brackets">{</span>
+          <span class="letters">tm</span>  
+          <span class="brackets">}</span>
+        </h1>
+      </div>
+
+    </header>
+    <!-- /#banner -->
+    <!-- Sidebar -->
+<button id="menubtn" class="menu" aria-controls="sidebar">
+  <span class="sr-only">Menu</span>
+  <i class="fa fa-bars" aria-hidden="true" style="display: flex;align-content: center;justify-content: center;"></i>
+</button>
+<div id="sidebar">
+  <div class="menu-content">
+    <!-- Logo -->
+    <h1 id="logo" class="logo-div">
+      <a href="/">
+        <h1 id="nohover">
+          <span class="brackets">{</span>
+          <span class="letters">tm</span>
+          <span class="brackets">}</span>
+        </h1>
+        <h1 id="hover" class="noactive" style="position: relative">
+          <span class="brackets">{</span>
+          <span class="letters">tales</span>
+          <span class="letters">mota</span>
+          <span class="brackets">}</span>
+        </h1>
+      </a>
+    </h1>
+    <!-- Text -->
+    <div class="search">
+      <header style="margin-top: 20px">
+        <label for="sitesearch">
+          Search
+        </label>
+        <input id="sitesearch" data-stork="sitesearch"/>
+        <div data-stork="sitesearch-output"></div>
+      </header>
+    </div>
+    <!-- Nav -->
+    <nav id="nav">
+      <header>
+        <h2>Categories</h2>
+      </header>
+      <ul>
+      </ul>
+      <hr class="menu_separator" />
+    </nav>
+
+    <!-- Search -->
+    <!-- <section class="box search">
+                          <form method="post" action="#">
+                              <input type="text" class="text" name="search" placeholder="Search" />
+                          </form>
+                      </section> -->
+
+    <!-- Recent Posts -->
+    <section class="box recent-posts">
+      <header>
+        <h2>Contact Me</h2>
+      </header>
+      <ul class="contact">
+        <li>
+          <a
+            class="icon fa-linkedin"
+            href="https://www.linkedin.com/in/tales-mota-machado-msc-0156aa50/"
+          >
+            <span>LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <a
+            class="icon fa-github"
+            href="https://github.com/talesmota"
+            target="_blank"
+          >
+            <span>Github</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<script>
+  var button = document.querySelector("#menubtn");
+  var menu = document.querySelector("#sidebar");
+  function toggleNav(nav, navContent) {
+    var navEle = document.querySelector(nav);
+    var navContent = document.querySelector(navContent);
+    if (!navEle) return;
+
+    if (!navEle.classList.contains("open")) {
+      navEle.setAttribute("class", "open");
+      setTimeout(() => navContent.classList.add("open"), 300);
+      return;
+    }
+    navEle.removeAttribute("class");
+    navContent.classList.remove("open");
+  }
+  button.addEventListener(
+    "click",
+    () => toggleNav("#sidebar", ".menu-content"),
+    false
+  );
+
+  let hover = document.querySelector("#logo a");
+  const logoToggle = () => {
+    let active = document.querySelector("#hover");
+    let noactive = document.querySelector("#nohover");
+    if (noactive.classList.contains("noactive")) {
+      active.classList.add("noactive");
+      noactive.classList.remove("noactive");
+    } else {
+      noactive.classList.add("noactive");
+      active.classList.remove("noactive");
+    }
+  };
+  hover.addEventListener("mouseenter", logoToggle, false);
+  hover.addEventListener("mouseleave", logoToggle, false);
+</script>    <!-- /#menu -->
+    <h1>My super title</h1>
+    
+	<main>
+		
+        <style>
+            .hidden{
+                display: none;
+            }
+            .show{
+                display: flex;
+            }
+            .player_thumb{
+                width: 113px; height: auto; 
+            }
+        </style>
+        <div id="content">
+
+            <h2>Absolut Classic Rock</h2>
+            <button id="absoluteButton" class="stop"> Play </button>
+
+            <div id="absolutePlayer" class="hidden">
+                <div class="player_thumb">
+                    <img id="playerThumb" src="https://assets.planetradio.co.uk/artist/1-1/160x160/1579.jpg?ver=1465084026" alt="Jimi Hendrix">
+                </div>
+                <div style="margin-left: 20px;">
+                    <h3 id="playerAuthor">Jimi Hendrix</h3>
+                    <h4 id="playerMusic">Little Wing</h4>
+                </div>
+            </div>
+            <div style="display: none;">
+                <audio id="absoluteClassicRock" controls>
+                    <source src="https://stream-ar.planetradio.co.uk/absoluteclassicrockhigh.aac?direct=true&amp;listenerid=undefined&amp;aw_0_1st.bauer_listenerid=undefined&amp;aw_0_1st.playerid=BMUK_html5&amp;aw_0_1st.skey=1651489000&amp;aw_0_1st.bauer_loggedin=false&amp;aw_0_req.userConsentV2=CPYVzYAPYVzYAAGABCENCNCsAP_AAAAAAAKIHANd_X_fbX9D-_59_9t0eY1f9_r3v-QzjgeNs-8FyJ_W_L0X_2E7NB36pq4KuR4Eu3LBAQNlHMHUTQmQaIkVqTHsak2MpyNKJ7LEmlMZO2dYGHtPn9FD-YKY795___b73j-__9_-z5T3_8ff3_N5_0gEAAACQyAmABQAIYATABHADLgH2AfgBGACOAFXAK2AbwBMQCbAFogLYAXmAzkBngDPhgAoAbQA8ACxAHVAR6Ak4BdAC8gGhANvEQGQADABWAEMAMgAZYA2QB8gD8AIAARgAp4BVwDWAHVAPkAh0BIgCbAE7AKRAXIAwkBk4DOQGfCAAoAJADeALoAaEA3QJBSAAMAAgABcAFAAVAAyAByADwAQAAwABkADQAHkAQwBFACYAE-AKoArABYADeAHMAPQAfgBCACGgEQARIAjgBLACaAFKALcAYYAyIBlAGWANUAbIA7wB7QD4APmAfYB-gEAAIpARcBGACNAEcAJSAUEAp4BVwC5gGKANYAbQA3ABvAD0AHyAQ6AiEBIgCYgEygJsATsAocBSICmgFigLQAWwAuQBd4C8wGDAMJAYaAyQBk4DLgGcgM-AaQA06BrAGsgNvCAIoAHAAeACQAP4AigBIgDNAG0AOcAgYBBwCfgFDAKWAaIA6oCPQErAJtAWEAugBdQC7QF5AMCAYgAxYBkIDIwGhANGAaUA1MBtwDdA0CAAAwAVgAuACGAGQAMsAbIA-QB-AEAAIKARgAp4BV4C0ALSAawA3gB1QD5AIdARUAkQBNgCdgFIgLkAYSAxgBk4DOQGeAM-DABgDZAHUAXQAyMBoQDdBUBgACgAQwAmABcAEcAMsAfIA_ACMAEcAKvAWgBaQDeAJBATEAmwBTYC2AFyALzAZyAzwBnwDchQAkAbQA8ACCgHVAR6AugBoQDXgG3joMoABgAFwAUABUADIAHIAPgBAAC6AGAAZAA0AB4AD6AIYAigBMACfAFUAVgAsABcAC-AGIAMwAbwA5gB6AD8AIaARABEgCOAEsAJgATQAowBSgCxAFvAMIAwwBkADKAGiANkAd4A9gB8wD7AP0Af4BAwCKQEWARgAjkBKQEqAKCAU8Aq4BYoC0ALSAXMAuoBeQDFAG0ANwAdQA9ACHQEQgIqAReAkEBIgCVAE2AJ2AUOApoBVgCxQFoALYAXAAuQBdoC7wF5gMGAYSAw0BiQDGAGPAMkAZOAyoBlwDMwGcgM-AaJA0gDSQGlgNOAawA28cBCAARAA4ADwALgAkAByAD8AMgAaAA_gCKAEiALMAZYAzQBtADnAHcAQAAgsBBwEIAIiATaAnwCfgFLAKgAXoAwIBmQDWAG8AOOAdIA6oB5AD5AIQAR7AlYCVwExQJkAmUBNoChQFIAKTAUwAqoBXYCygFqALigXQBdQC-gGBAMQAYsAyEBl4DQgGjANKAaaA1MBrwDaQG2ANuIQOgAFgAUAAyAC4AGIAQwAmABTACqAFwAL4AYgAzABvAD0AI4AWIAwgB3gD5gH2AfgA_wCKAEYAI4ASkAoIBQwCngFXgLQAtIBcwDFAG0AOoAegBEICQQEiAJUATYApoBYoC0QFsALaAXAAuQBdoDEgGTgM5AZ4Az4BogDSQGlgOAIAIQAEAA_ADQAH8ASIAywBtADnAHgAQUAnwBSwCxAGZAN4AdUA7YCPQEnAJXATEAm0BQoCkAFJgLoAXkAwIBoQDSgGpgNsAbcSgcgAGAAQAAsACgAGQAOAAfgBgAGIAPAAiABMACqAFwAL4AYgAzABtAENAIgAiQBHACjAFKALcAYQA1QBsgDvAHyAPwAjABHACTgFPAKvAWgBaQC6gGKANwAdQA-QCHQEVAIvASIAmwBYoC2AF2gLzAZOAzkBngDPgGkANYAbeA4AkAdAAcABcAEIAOQAyACRAFyAMsAagA2gB3AEAAJ8AUsAqABmQDeAHVAPsAj0BKwCbQFJgLKAXQAwIBiwDSgG5FII4ABgAFwAUABUADIAHIAPgBBADAAMgAaAA8gCGAIoATAAngBSACqAFgAL4AYgAzABzAD8AIaARABEgCjAFKALEAW4AwgBlADRAGqANkAd4A-YB9gH6ARYAjABHACUgFBAKGAVcArYBcwC8gG0ANwAegBDoCLwEiAJOATYAnYBQ4CxQFsALgAXIAu0BeYDDQGMAMkAZOAy4BnIDPAGfQNIA0mBrAGsgNvKAMwALgAhABIADkAH4AVgAyABtAEcAJEAXIAywBqADXAG0AOcAdwA8ACAAEVAJEAScAm0BPgE_AKWAWIAuoBigDeAHVAO2AeQA_4CIQEegJiATKAm0BSACmAFdgLQAXQAvIBfQDAgGLANEAaVA1IDUwGvA.YAAAAAAAAAAA&amp;aw_0_1st.octave_permutive=%5B%2282977%22%5D&amp;permutiveid=ab8e0b05-32ec-4834-9c0b-9a2a776be31b">
+                </audio>
+            </div>
+        </div>
+
+        <script>
+            var absoluteButton = document.querySelector("#absoluteButton");
+            let timeToGetAnotherMeta = 0;
+            function getMetaData( playerButton ) {
+                const url = "https://listenapi.planetradio.co.uk/api9.2/initdadi/absolute-classic-rock";
+                fetch(url), {  mode: 'no-cors' }.then( (repsonse) => {
+                    const nowPlaying = response.stationNowPlaying;
+                    const { nowPlayingTrack , nowPlayingArtist, nowPlayingSmallImage, nowPlayingDuration } = nowPlaying;
+                    const player = document.querySelector("#absolutePlayer");
+                    player.classList.remove('hidden');
+                    player.classList.add('show');
+
+                    const playerThumb = document.querySelector("#playerThumb");
+                    playerThumb.src = nowPlayingSmallImage;
+                    playerThumb.alt = nowPlayingArtist;
+
+                    const playerAuthor = document.querySelector("#playerAuthor");
+                    playerAuthor.innerHTML = nowPlayingArtist;
+
+                    const playerMusic = document.querySelector("#playerMusic");
+                    playerMusic.innerHTML = nowPlayingTrack;
+                    timeToGetAnotherMeta = nowPlayingDuration;
+
+                    if ( timeToGetAnotherMeta != 0) {
+                        if ( playerButton.classList.contains('play')) {
+                            setTimeout( () =>  getMetaData(playerButton), timeToGetAnotherMeta * 1000);
+                        }
+                    } else {
+                        if ( playerButton.classList.contains('play')) {
+                            setTimeout( () =>  getMetaData(playerButton), 60000);
+                        }
+                    }
+
+                })
+            }
+            function play_pause( buttonSel, audioSel ) {
+                var audio = document.querySelector(audioSel);
+                var absoluteButton = document.querySelector(buttonSel);
+                if ( absoluteButton.classList.contains('stop')) {
+                    audio.play();
+                    absoluteButton.classList.remove('stop');
+                    absoluteButton.classList.add('play');
+                    absoluteButton.innerHTML = 'Playing...';
+                    getMetaData(absoluteButton);
+                } else {
+                    audio.pause();
+                    absoluteButton.classList.remove('play');
+                    absoluteButton.classList.add('stop');
+                    absoluteButton.innerHTML = 'Paused';
+                    
+                }
+
+
+            }
+            absoluteButton.addEventListener('click', () => play_pause( '#absoluteButton', '#absoluteClassicRock'), false);
+        </script>
+    
+	</main>
+
+		<p>
+		Last updated: Tue 10 July 2012
+		</p>
+    <!-- /#contentinfo -->
+
+<script>
+    stork.initialize()
+    stork.downloadIndex("sitesearch", "https://talesmota.dev/search-index.st")
+    stork.attach("sitesearch")
+</script>
+  </body>
+</html>
