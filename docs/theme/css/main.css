@@ -245,7 +245,7 @@ body {
 
 @media screen and (min-width: 737px) and (max-width: 1200px) {
  
-  ontainer.\31 25\25 {
+  .container.\31 25\25 {
     width: 100%;
     max-width: 125%;
     min-width: 100%;
@@ -2809,6 +2809,7 @@ ol.default li {
   #content {
     padding: 3em 5em 8em 5em;
     margin-left: 21em;
+    width: 72vw;
   }
 }
 
@@ -2888,7 +2889,8 @@ ol.default li {
 
   #content {
     padding: 2em 3em 6em 3em;
-    margin-left: 14em;
+    margin-left: 15em;
+    width: 78vw;
   }
 }
 
@@ -2897,6 +2899,11 @@ ol.default li {
 @media screen and (min-width: 737px) and (max-width: 1000px) {
   /* Basic */
 
+  #content{
+    margin-left: 15em !important;
+    width: 66%;
+    margin-top: -23vh !important;
+  }
   body {
     min-width: 641px;
     font-size: 14pt;
@@ -3178,6 +3185,7 @@ ol.default li {
     margin-left: 0;
     margin-right: 0;
     min-height: 0 !important;
+
   }
 
   /* Sidebar */
