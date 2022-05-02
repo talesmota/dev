@@ -158,7 +158,7 @@
             .show{
                 display: flex;
             }
-            .player_thumb{
+            .player_thumb img{
                 width: 113px; height: auto; 
             }
         </style>
@@ -176,7 +176,7 @@
 </div>
 <div style="display: none;">
 <audio controls="" id="absoluteClassicRock">
-<source src="https://stream-ar.planetradio.co.uk/absoluteclassicrockhigh.aac?direct=true&amp;listenerid=undefined&amp;aw_0_1st.bauer_listenerid=undefined&amp;aw_0_1st.playerid=BMUK_html5&amp;aw_0_1st.skey=1651489000&amp;aw_0_1st.bauer_loggedin=false&amp;aw_0_req.userConsentV2=CPYVzYAPYVzYAAGABCENCNCsAP_AAAAAAAKIHANd_X_fbX9D-_59_9t0eY1f9_r3v-QzjgeNs-8FyJ_W_L0X_2E7NB36pq4KuR4Eu3LBAQNlHMHUTQmQaIkVqTHsak2MpyNKJ7LEmlMZO2dYGHtPn9FD-YKY795___b73j-__9_-z5T3_8ff3_N5_0gEAAACQyAmABQAIYATABHADLgH2AfgBGACOAFXAK2AbwBMQCbAFogLYAXmAzkBngDPhgAoAbQA8ACxAHVAR6Ak4BdAC8gGhANvEQGQADABWAEMAMgAZYA2QB8gD8AIAARgAp4BVwDWAHVAPkAh0BIgCbAE7AKRAXIAwkBk4DOQGfCAAoAJADeALoAaEA3QJBSAAMAAgABcAFAAVAAyAByADwAQAAwABkADQAHkAQwBFACYAE-AKoArABYADeAHMAPQAfgBCACGgEQARIAjgBLACaAFKALcAYYAyIBlAGWANUAbIA7wB7QD4APmAfYB-gEAAIpARcBGACNAEcAJSAUEAp4BVwC5gGKANYAbQA3ABvAD0AHyAQ6AiEBIgCYgEygJsATsAocBSICmgFigLQAWwAuQBd4C8wGDAMJAYaAyQBk4DLgGcgM-AaQA06BrAGsgNvCAIoAHAAeACQAP4AigBIgDNAG0AOcAgYBBwCfgFDAKWAaIA6oCPQErAJtAWEAugBdQC7QF5AMCAYgAxYBkIDIwGhANGAaUA1MBtwDdA0CAAAwAVgAuACGAGQAMsAbIA-QB-AEAAIKARgAp4BV4C0ALSAawA3gB1QD5AIdARUAkQBNgCdgFIgLkAYSAxgBk4DOQGeAM-DABgDZAHUAXQAyMBoQDdBUBgACgAQwAmABcAEcAMsAfIA_ACMAEcAKvAWgBaQDeAJBATEAmwBTYC2AFyALzAZyAzwBnwDchQAkAbQA8ACCgHVAR6AugBoQDXgG3joMoABgAFwAUABUADIAHIAPgBAAC6AGAAZAA0AB4AD6AIYAigBMACfAFUAVgAsABcAC-AGIAMwAbwA5gB6AD8AIaARABEgCOAEsAJgATQAowBSgCxAFvAMIAwwBkADKAGiANkAd4A9gB8wD7AP0Af4BAwCKQEWARgAjkBKQEqAKCAU8Aq4BYoC0ALSAXMAuoBeQDFAG0ANwAdQA9ACHQEQgIqAReAkEBIgCVAE2AJ2AUOApoBVgCxQFoALYAXAAuQBdoC7wF5gMGAYSAw0BiQDGAGPAMkAZOAyoBlwDMwGcgM-AaJA0gDSQGlgNOAawA28cBCAARAA4ADwALgAkAByAD8AMgAaAA_gCKAEiALMAZYAzQBtADnAHcAQAAgsBBwEIAIiATaAnwCfgFLAKgAXoAwIBmQDWAG8AOOAdIA6oB5AD5AIQAR7AlYCVwExQJkAmUBNoChQFIAKTAUwAqoBXYCygFqALigXQBdQC-gGBAMQAYsAyEBl4DQgGjANKAaaA1MBrwDaQG2ANuIQOgAFgAUAAyAC4AGIAQwAmABTACqAFwAL4AYgAzABvAD0AI4AWIAwgB3gD5gH2AfgA_wCKAEYAI4ASkAoIBQwCngFXgLQAtIBcwDFAG0AOoAegBEICQQEiAJUATYApoBYoC0QFsALaAXAAuQBdoDEgGTgM5AZ4Az4BogDSQGlgOAIAIQAEAA_ADQAH8ASIAywBtADnAHgAQUAnwBSwCxAGZAN4AdUA7YCPQEnAJXATEAm0BQoCkAFJgLoAXkAwIBoQDSgGpgNsAbcSgcgAGAAQAAsACgAGQAOAAfgBgAGIAPAAiABMACqAFwAL4AYgAzABtAENAIgAiQBHACjAFKALcAYQA1QBsgDvAHyAPwAjABHACTgFPAKvAWgBaQC6gGKANwAdQA-QCHQEVAIvASIAmwBYoC2AF2gLzAZOAzkBngDPgGkANYAbeA4AkAdAAcABcAEIAOQAyACRAFyAMsAagA2gB3AEAAJ8AUsAqABmQDeAHVAPsAj0BKwCbQFJgLKAXQAwIBiwDSgG5FII4ABgAFwAUABUADIAHIAPgBBADAAMgAaAA8gCGAIoATAAngBSACqAFgAL4AYgAzABzAD8AIaARABEgCjAFKALEAW4AwgBlADRAGqANkAd4A-YB9gH6ARYAjABHACUgFBAKGAVcArYBcwC8gG0ANwAegBDoCLwEiAJOATYAnYBQ4CxQFsALgAXIAu0BeYDDQGMAMkAZOAy4BnIDPAGfQNIA0mBrAGsgNvKAMwALgAhABIADkAH4AVgAyABtAEcAJEAXIAywBqADXAG0AOcAdwA8ACAAEVAJEAScAm0BPgE_AKWAWIAuoBigDeAHVAO2AeQA_4CIQEegJiATKAm0BSACmAFdgLQAXQAvIBfQDAgGLANEAaVA1IDUwGvA.YAAAAAAAAAAA&amp;aw_0_1st.octave_permutive=%5B%2282977%22%5D&amp;permutiveid=ab8e0b05-32ec-4834-9c0b-9a2a776be31b"/>
+<source src="https://stream-ar.planetradio.co.uk/absoluteclassicrockhigh.aac?direct=true&amp;listenerid=undefined&amp;aw_0_1st.bauer_listenerid=undefined&amp;aw_0_1st.playerid=BMUK_html5&amp;aw_0_1st.skey=1651496444&amp;aw_0_1st.bauer_loggedin=false&amp;aw_0_req.userConsentV2=CPYVzYAPYVzYAAGABCENCNCsAP_AAAAAAAKIHANd_X_fbX9D-_59_9t0eY1f9_r3v-QzjgeNs-8FyJ_W_L0X_2E7NB36pq4KuR4Eu3LBAQNlHMHUTQmQaIkVqTHsak2MpyNKJ7LEmlMZO2dYGHtPn9FD-YKY795___b73j-__9_-z5T3_8ff3_N5_0gEAAACQyAmABQAIYATABHADLgH2AfgBGACOAFXAK2AbwBMQCbAFogLYAXmAzkBngDPhgAoAbQA8ACxAHVAR6Ak4BdAC8gGhANvEQGQADABWAEMAMgAZYA2QB8gD8AIAARgAp4BVwDWAHVAPkAh0BIgCbAE7AKRAXIAwkBk4DOQGfCAAoAJADeALoAaEA3QJBSAAMAAgABcAFAAVAAyAByADwAQAAwABkADQAHkAQwBFACYAE-AKoArABYADeAHMAPQAfgBCACGgEQARIAjgBLACaAFKALcAYYAyIBlAGWANUAbIA7wB7QD4APmAfYB-gEAAIpARcBGACNAEcAJSAUEAp4BVwC5gGKANYAbQA3ABvAD0AHyAQ6AiEBIgCYgEygJsATsAocBSICmgFigLQAWwAuQBd4C8wGDAMJAYaAyQBk4DLgGcgM-AaQA06BrAGsgNvCAIoAHAAeACQAP4AigBIgDNAG0AOcAgYBBwCfgFDAKWAaIA6oCPQErAJtAWEAugBdQC7QF5AMCAYgAxYBkIDIwGhANGAaUA1MBtwDdA0CAAAwAVgAuACGAGQAMsAbIA-QB-AEAAIKARgAp4BV4C0ALSAawA3gB1QD5AIdARUAkQBNgCdgFIgLkAYSAxgBk4DOQGeAM-DABgDZAHUAXQAyMBoQDdBUBgACgAQwAmABcAEcAMsAfIA_ACMAEcAKvAWgBaQDeAJBATEAmwBTYC2AFyALzAZyAzwBnwDchQAkAbQA8ACCgHVAR6AugBoQDXgG3joMoABgAFwAUABUADIAHIAPgBAAC6AGAAZAA0AB4AD6AIYAigBMACfAFUAVgAsABcAC-AGIAMwAbwA5gB6AD8AIaARABEgCOAEsAJgATQAowBSgCxAFvAMIAwwBkADKAGiANkAd4A9gB8wD7AP0Af4BAwCKQEWARgAjkBKQEqAKCAU8Aq4BYoC0ALSAXMAuoBeQDFAG0ANwAdQA9ACHQEQgIqAReAkEBIgCVAE2AJ2AUOApoBVgCxQFoALYAXAAuQBdoC7wF5gMGAYSAw0BiQDGAGPAMkAZOAyoBlwDMwGcgM-AaJA0gDSQGlgNOAawA28cBCAARAA4ADwALgAkAByAD8AMgAaAA_gCKAEiALMAZYAzQBtADnAHcAQAAgsBBwEIAIiATaAnwCfgFLAKgAXoAwIBmQDWAG8AOOAdIA6oB5AD5AIQAR7AlYCVwExQJkAmUBNoChQFIAKTAUwAqoBXYCygFqALigXQBdQC-gGBAMQAYsAyEBl4DQgGjANKAaaA1MBrwDaQG2ANuIQOgAFgAUAAyAC4AGIAQwAmABTACqAFwAL4AYgAzABvAD0AI4AWIAwgB3gD5gH2AfgA_wCKAEYAI4ASkAoIBQwCngFXgLQAtIBcwDFAG0AOoAegBEICQQEiAJUATYApoBYoC0QFsALaAXAAuQBdoDEgGTgM5AZ4Az4BogDSQGlgOAIAIQAEAA_ADQAH8ASIAywBtADnAHgAQUAnwBSwCxAGZAN4AdUA7YCPQEnAJXATEAm0BQoCkAFJgLoAXkAwIBoQDSgGpgNsAbcSgcgAGAAQAAsACgAGQAOAAfgBgAGIAPAAiABMACqAFwAL4AYgAzABtAENAIgAiQBHACjAFKALcAYQA1QBsgDvAHyAPwAjABHACTgFPAKvAWgBaQC6gGKANwAdQA-QCHQEVAIvASIAmwBYoC2AF2gLzAZOAzkBngDPgGkANYAbeA4AkAdAAcABcAEIAOQAyACRAFyAMsAagA2gB3AEAAJ8AUsAqABmQDeAHVAPsAj0BKwCbQFJgLKAXQAwIBiwDSgG5FII4ABgAFwAUABUADIAHIAPgBBADAAMgAaAA8gCGAIoATAAngBSACqAFgAL4AYgAzABzAD8AIaARABEgCjAFKALEAW4AwgBlADRAGqANkAd4A-YB9gH6ARYAjABHACUgFBAKGAVcArYBcwC8gG0ANwAegBDoCLwEiAJOATYAnYBQ4CxQFsALgAXIAu0BeYDDQGMAMkAZOAy4BnIDPAGfQNIA0mBrAGsgNvKAMwALgAhABIADkAH4AVgAyABtAEcAJEAXIAywBqADXAG0AOcAdwA8ACAAEVAJEAScAm0BPgE_AKWAWIAuoBigDeAHVAO2AeQA_4CIQEegJiATKAm0BSACmAFdgLQAXQAvIBfQDAgGLANEAaVA1IDUwGvA.YAAAAAAAAAAA&amp;aw_0_1st.octave_permutive=%5B%2282977%22%2C%2283482%22%2C%2283685%22%5D&amp;permutiveid=ab8e0b05-32ec-4834-9c0b-9a2a776be31b"/>
 </audio>
 </div>
 </div>
@@ -184,36 +184,38 @@
             var absoluteButton = document.querySelector("#absoluteButton");
             let timeToGetAnotherMeta = 0;
             function getMetaData( playerButton ) {
-                const url = "https://listenapi.planetradio.co.uk/api9.2/initdadi/absolute-classic-rock";
-                fetch(url), {  mode: 'no-cors' }.then( (repsonse) => {
-                    const nowPlaying = response.stationNowPlaying;
-                    const { nowPlayingTrack , nowPlayingArtist, nowPlayingSmallImage, nowPlayingDuration } = nowPlaying;
-                    const player = document.querySelector("#absolutePlayer");
-                    player.classList.remove('hidden');
-                    player.classList.add('show');
+                const url = "https://thingproxy.freeboard.io/fetch/https://listenapi.planetradio.co.uk/api9.2/initdadi/absolute-classic-rock";
+                
+                (async () => {
+                const response = await fetch(url);
+                const body = await response.json();
+                const nowPlaying = body.stationNowPlaying;
+                const { nowPlayingTrack , nowPlayingArtist, nowPlayingSmallImage, nowPlayingDuration } = nowPlaying;
+                const player = document.querySelector("#absolutePlayer");
+                player.classList.remove('hidden');
+                player.classList.add('show');
+                console.log( { nowPlayingTrack , nowPlayingArtist, nowPlayingSmallImage, nowPlayingDuration } );
+                const playerThumb = document.querySelector("#playerThumb");
+                playerThumb.src = nowPlayingSmallImage;
+                playerThumb.alt = nowPlayingArtist;
 
-                    const playerThumb = document.querySelector("#playerThumb");
-                    playerThumb.src = nowPlayingSmallImage;
-                    playerThumb.alt = nowPlayingArtist;
+                const playerAuthor = document.querySelector("#playerAuthor");
+                playerAuthor.innerHTML = nowPlayingArtist;
 
-                    const playerAuthor = document.querySelector("#playerAuthor");
-                    playerAuthor.innerHTML = nowPlayingArtist;
+                const playerMusic = document.querySelector("#playerMusic");
+                playerMusic.innerHTML = nowPlayingTrack;
+                timeToGetAnotherMeta = nowPlayingDuration;
 
-                    const playerMusic = document.querySelector("#playerMusic");
-                    playerMusic.innerHTML = nowPlayingTrack;
-                    timeToGetAnotherMeta = nowPlayingDuration;
-
-                    if ( timeToGetAnotherMeta != 0) {
-                        if ( playerButton.classList.contains('play')) {
-                            setTimeout( () =>  getMetaData(playerButton), timeToGetAnotherMeta * 1000);
-                        }
-                    } else {
-                        if ( playerButton.classList.contains('play')) {
-                            setTimeout( () =>  getMetaData(playerButton), 60000);
-                        }
+                if ( timeToGetAnotherMeta != 0) {
+                    if ( playerButton.classList.contains('play')) {
+                        setTimeout( () =>  getMetaData(playerButton), (timeToGetAnotherMeta/3) * 1000);
                     }
-
-                })
+                } else {
+                    if ( playerButton.classList.contains('play')) {
+                        setTimeout( () =>  getMetaData(playerButton), 60000);
+                    }
+                }
+                })()
             }
             function play_pause( buttonSel, audioSel ) {
                 var audio = document.querySelector(audioSel);
