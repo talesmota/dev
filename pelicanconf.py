@@ -73,3 +73,11 @@ DEFAULT_PAGINATION = 15
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+DISPLAY_PAGES_ON_MENU = True
+PAGE_PATHS = ['pages']
+PAGE_URL = 'pages/{slug}/'
+PAGE_SAVE_AS = 'pages/{slug}/index.html'
+PAGE_LANG_URL = 'pages/{slug}-{lang}.html'
+PAGE_LANG_SAVE_AS = 'pages/{slug}-{lang}.html'
+GOOGLE_ANALYTICS=True
