@@ -5,7 +5,7 @@ SITEURL = 'https://talesmota.dev/'
 # SITEURL = "http://localhost:8000"
 # PORT=8000
 # 
-# RELATIVE_URLS = True
+RELATIVE_URLS = True
 OUTPUT_PATH = 'docs'
 
 PATH = 'content'

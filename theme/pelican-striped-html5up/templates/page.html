@@ -1,5 +1,19 @@
 {% extends "base.html" %}
-{% block title %}{{ page.title }}{%endblock%}
+{% block head %}
+  {{ super() }}
+  {% for k in ['description', 'robots','author','keywords','twitter:card','twitter:site','twitter:title','twitter:creator','twitter:description','og:type','og:url','og:title','og:image','og:description'] %}
+	{% if page[k]  %}
+		<meta name="{{k}}" content="{{ page[k] }}" />
+	{% endif %}
+  {% endfor %}
+  
+
+  {% for tag in page.tags %}
+    <meta name="tags" content="{{tag}}" />
+  {% endfor %}
+
+{% endblock %}
+
 {% block content %}
     <h1>{{ page.title }}</h1>
     {% import 'translations.html' as translations with context %}

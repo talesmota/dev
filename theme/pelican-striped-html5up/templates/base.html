@@ -61,6 +61,8 @@
       title="{{ SITENAME }} Tags RSS Feed"
     />
     {% endif %} {% endblock head %}
+    {% block metatags %} {% endblock%}
+    {% include 'analytics.html' %}
     <link rel="stylesheet" href="/theme/css/main.css" />
     <link rel="stylesheet" href="/theme/css/logo.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -79,7 +81,7 @@
     <!--[if lte IE 8
       ]><link rel="stylesheet" href="/theme/css/ie8.css"
     /><![endif]-->
-    {% include 'analytics.html' %}
+    
   </head>
 
   <body>
@@ -108,5 +110,9 @@
     stork.downloadIndex("sitesearch", "{{ SITEURL }}/search-index.st")
     stork.attach("sitesearch")
 </script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TNTJS8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   </body>
 </html>
