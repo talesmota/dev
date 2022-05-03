@@ -198,7 +198,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <div style="display: none;">
 <audio controls="" id="absoluteClassicRock">
-<source src="https://stream-ar.planetradio.co.uk/absoluteclassicrockhigh.aac?direct=true&amp;amsparams=playerid:BMUK_ukrp;skey:1651577894;&amp;aw_0_1st.skey=1651577894&amp;aw_0_req.gdpr=true"/>
+<source src=""/>
 </audio>
 </div>
 </div>
@@ -241,6 +241,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
             function play_pause( buttonSel, audioSel ) {
                 var audio = document.querySelector(audioSel);
+                if ( !audio.children[0].src !== '' ) {
+                    const t = new Date().getTime();
+                    const url = `https://stream-ar.planetradio.co.uk/absoluteclassicrockhigh.aac?direct=true&amsparams=playerid:BMUK_ukrp;skey:${t};&aw_0_1st.skey=${t}&aw_0_req.gdpr=true`;
+
+                }
                 var absoluteButton = document.querySelector(buttonSel);
                 if ( absoluteButton.classList.contains('stop')) {
                     audio.play();

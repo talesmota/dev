@@ -53,7 +53,7 @@
             </div>
             <div style="display: none;">
                 <audio id="absoluteClassicRock" controls>
-                    <source src="https://stream-ar.planetradio.co.uk/absoluteclassicrockhigh.aac?direct=true&amsparams=playerid:BMUK_ukrp;skey:1651577894;&aw_0_1st.skey=1651577894&aw_0_req.gdpr=true" />
+                    <source src="" />
                 </audio>
             </div>
         </div>
@@ -97,6 +97,11 @@
             }
             function play_pause( buttonSel, audioSel ) {
                 var audio = document.querySelector(audioSel);
+                if ( !audio.children[0].src !== '' ) {
+                    const t = new Date().getTime();
+                    const url = `https://stream-ar.planetradio.co.uk/absoluteclassicrockhigh.aac?direct=true&amsparams=playerid:BMUK_ukrp;skey:${t};&aw_0_1st.skey=${t}&aw_0_req.gdpr=true`;
+
+                }
                 var absoluteButton = document.querySelector(buttonSel);
                 if ( absoluteButton.classList.contains('stop')) {
                     audio.play();
